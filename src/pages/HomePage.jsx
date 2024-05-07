@@ -1,45 +1,19 @@
-// import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
-import Button from '@mui/material/Button';
-// import SendIcon from '@mui/icons-material/Send';
-import DeleteIcon from '@mui/icons-material/Delete';
-// import Stack from '@mui/material/Stack';
 
+import { Box, Stack, Grid } from '@mui/material';
+import AppBar from '../components/AppBar';
 
 function HomePage() {
 
-const navigate = useNavigate();
-
-const handleClick = () => {
-    let isValid = true
-   if (isValid) navigate('/random-path');
-   else navigate('/fftt');
-};
-
   return (
-    <div>
-      <h1>HomePage</h1>
-      
-      <Link to='/login'>LoginPage</Link>
-      <Link to='/profile'>ProfilePage</Link>
-      <Button
-      sx={{
-        padding: '16px',
-        color: 'black',
-        '&:hover': {
-            color: 'white',
-            padding: '20px'
-        },
-      }}
-       endIcon={<DeleteIcon/>}
-       variant="contained" 
-       disableElevation
-       color="error" 
-       size="small" 
-       onClick={handleClick}>
-        Go to 404
-        </Button>
-    </div>
+    <Box flexGrow={1}>
+      <AppBar />
+
+      <Grid container sx={{ textAlign: 'center', height: 'cal(100vh - 64px)' }}>
+          <Grid item md={3} sx={{ bgcolor:'pink',display:{ xs: 'none', md: 'block'}}}>L</Grid>
+          <Grid item xs={12} md={6} >M</Grid>
+          <Grid item md={3} sx={{textAlign:'center',bgcolor:'pink',display:{ xs: 'none', md: 'block'}}}>R</Grid>
+      </Grid>
+    </Box>
   )
 }
 
