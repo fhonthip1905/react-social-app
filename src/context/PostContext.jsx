@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext,useEffect,useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import *as postAPI from '../apis/postApi';
 
 export const PostContext = createContext();
@@ -7,6 +7,7 @@ export const PostContext = createContext();
 
 export default function PostContextProvider({children}){
     const [posts, setPost] = useState([]);
+    
     useEffect(() => {
         getAllPost();
     },[])

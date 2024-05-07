@@ -1,4 +1,6 @@
-
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
 *,
 *::before,
 *::after {
@@ -32,10 +34,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   /* align-items: center; */
-  justify-content: center;
-  place-items: center;
+  /* justify-content: center;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
