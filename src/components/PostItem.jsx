@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function PostItem() {
+export default function PostItem({title,body}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -46,8 +46,8 @@ export default function PostItem() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={title}
+        // subheader="September 14, 2016"
       />
       <CardMedia
         component="img"
@@ -57,9 +57,7 @@ export default function PostItem() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+          {body}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
