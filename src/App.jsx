@@ -1,12 +1,19 @@
-import Router from './routes/Router'
+import Router from './routes/Router';
+import PostContextProvider from './context/PostContext';
+import AuthenContextProvider from './context/AuthenContext';
+import ThemeContextProvider from './context/ThemeContext';
 
 function App() {
  
   return (
-    <>
-      <Router />
-    </>
+    <ThemeContextProvider>
+      <AuthenContextProvider>
+        <PostContextProvider>
+          <Router />
+        </PostContextProvider>
+      </AuthenContextProvider>
+    </ThemeContextProvider>
   )
 }
 
-export default App
+export default App;

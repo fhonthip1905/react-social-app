@@ -1,9 +1,9 @@
 // import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
+// import SendIcon from '@mui/icons-material/Send';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Stack from '@mui/material/Stack';
+// import Stack from '@mui/material/Stack';
 
 
 function HomePage() {
@@ -23,6 +23,14 @@ const handleClick = () => {
       <Link to='/login'>LoginPage</Link>
       <Link to='/profile'>ProfilePage</Link>
       <Button
+      sx={{
+        padding: '16px',
+        color: 'black',
+        '&:hover': {
+            color: 'white',
+            padding: '20px'
+        },
+      }}
        endIcon={<DeleteIcon/>}
        variant="contained" 
        disableElevation
