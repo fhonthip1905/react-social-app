@@ -1,12 +1,16 @@
 import { createBrowserRouter , RouterProvider} from "react-router-dom"
 
+import HomePage from '../pages/HomePage.jsx';
+import LoginPage from '../pages/LoginPage.jsx';
+import ProfilePage from '../pages/ProfilePage.jsx';
+import NotFoundPage from '../pages/NotFoundPage.jsx';
 //createBrowserRouter : FN (Array < RouterObject>)
 //RouterProvider : Component
 const router = createBrowserRouter([
-    {path: "/", element: <h1>🌻 HOME </h1>},
-    {path: "/login", element: <h1>🌻 Login</h1>},
-    {path: "/profile", element: <h1>🌻 Proflie </h1>},
-    {path: "/*", element: <h1>🌻 404 Not Found 🌻 </h1>}
+    {path: "/", element: <HomePage/>},
+    {path: "/login", element: <LoginPage/>},
+    {path: "/profile", element: <ProfilePage/>},
+    {path: "/*", element: <NotFoundPage/>}
 ]); 
 function Router() {
   return <RouterProvider router={router} />;
